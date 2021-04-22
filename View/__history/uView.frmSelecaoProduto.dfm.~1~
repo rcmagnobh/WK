@@ -1,0 +1,144 @@
+inherited frmSelecaoProduto: TfrmSelecaoProduto
+  BorderIcons = []
+  BorderStyle = bsSingle
+  Caption = 'Sele'#231#227'o de Produto'
+  ClientHeight = 135
+  ClientWidth = 550
+  ExplicitWidth = 556
+  ExplicitHeight = 161
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlControle: TPanel
+    Left = 0
+    Top = 103
+    Width = 550
+    Height = 32
+    Align = alBottom
+    BevelOuter = bvNone
+    Caption = 'pnlControle'
+    TabOrder = 0
+    object Button1: TButton
+      Left = 473
+      Top = 5
+      Width = 75
+      Height = 25
+      Caption = 'Cance&lar'
+      ModalResult = 2
+      TabOrder = 0
+    end
+    object Button2: TButton
+      Left = 393
+      Top = 5
+      Width = 75
+      Height = 25
+      Caption = 'Con&firmar'
+      TabOrder = 1
+      OnClick = Button2Click
+    end
+  end
+  object pnlDetalhe: TPanel
+    Left = 0
+    Top = 0
+    Width = 550
+    Height = 103
+    Align = alClient
+    BevelOuter = bvNone
+    Caption = 'pnlDetalhe'
+    TabOrder = 1
+    object pnlProduto: TPanel
+      Left = 0
+      Top = 0
+      Width = 550
+      Height = 103
+      Align = alClient
+      BevelOuter = bvNone
+      Caption = 'pnlProduto'
+      Color = clAppWorkSpace
+      ParentBackground = False
+      TabOrder = 0
+      object Label4: TLabel
+        Left = 6
+        Top = 6
+        Width = 38
+        Height = 13
+        Caption = 'Produto'
+      end
+      object Label5: TLabel
+        Left = 8
+        Top = 56
+        Width = 64
+        Height = 13
+        Caption = 'Valor Unit'#225'rio'
+      end
+      object Label6: TLabel
+        Left = 136
+        Top = 56
+        Width = 56
+        Height = 13
+        Caption = 'Quantidade'
+      end
+      object Label7: TLabel
+        Left = 264
+        Top = 56
+        Width = 51
+        Height = 13
+        Caption = 'Valor Total'
+      end
+      object SpeedButton1: TSpeedButton
+        Left = 133
+        Top = 20
+        Width = 23
+        Height = 22
+        OnClick = SpeedButton1Click
+      end
+      object Edit1: TEdit
+        Left = 6
+        Top = 21
+        Width = 121
+        Height = 21
+        ReadOnly = True
+        TabOrder = 0
+        Text = 'Edit1'
+      end
+      object Edit2: TEdit
+        Left = 160
+        Top = 21
+        Width = 377
+        Height = 21
+        ReadOnly = True
+        TabOrder = 1
+        Text = 'Edit2'
+      end
+      object Edit3: TEdit
+        Left = 6
+        Top = 69
+        Width = 121
+        Height = 21
+        Alignment = taRightJustify
+        TabOrder = 2
+        Text = 'Edit3'
+        OnExit = Edit3Exit
+      end
+      object Edit4: TEdit
+        Left = 133
+        Top = 69
+        Width = 121
+        Height = 21
+        Alignment = taRightJustify
+        TabOrder = 3
+        Text = 'Edit4'
+        OnExit = Edit4Exit
+      end
+      object Edit5: TEdit
+        Left = 260
+        Top = 69
+        Width = 121
+        Height = 21
+        Alignment = taRightJustify
+        ReadOnly = True
+        TabOrder = 4
+        Text = 'Edit5'
+      end
+    end
+  end
+end

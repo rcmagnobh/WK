@@ -1,0 +1,36 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{AE7A6957-979C-4094-AFA8-4CBA83004B40}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="PDVTeste.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="PDVTeste">
+			<MSBuild Projects="PDVTeste.dproj"/>
+		</Target>
+		<Target Name="PDVTeste:Clean">
+			<MSBuild Projects="PDVTeste.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="PDVTeste:Make">
+			<MSBuild Projects="PDVTeste.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="PDVTeste"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="PDVTeste:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="PDVTeste:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>
